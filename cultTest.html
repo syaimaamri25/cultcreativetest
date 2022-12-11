@@ -1,0 +1,44 @@
+<section id="cultTest">
+  <div class="container">
+    <header class="">
+
+    </header>
+    <div class="row">
+      <div class="col-xs-12 col-lg-4">
+        <div class="items">
+          <div class="item" ng-repeat="item in items | filter: searchKeyword:monthFilter">
+            <div class="item__wrapper">
+              <div class="item__bookmark"><i class="fa fa-bookmark-o" aria-hidden="true"></i></div>
+              <figure class="item__img"><img ng-src="{{ item.image }}" /></figure>
+              <article class="item__details">
+                <h4>{{ item.title }}</h4>
+                <h5>{{ item.companyInfo }}</h5>
+                <ul class="item__type">
+                  <li>{{ item.type }} |</li>
+                  <li>{{ item.environment }}</li>
+                </ul>
+                <p>{{ item.salary }}</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-lg-8">
+        <div class="job-details" ng-repeat="item in items | limitTo: 1">
+          <figure class="job__img"><img ng-src="{{ item.image }}" />
+            <article class="job__info">
+              <h3>{{ item.title }}</h3>
+              <p>Job posted by {{ item.companyInfo }}</p>
+            </article>
+            <footer class="job__footer">
+              <button>Apply now</button>
+              <button>Share</button>
+            </footer>
+            <div class="job__bookmark"><i class="fa fa-bookmark-o" aria-hidden="true"></i></div>
+          </figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
